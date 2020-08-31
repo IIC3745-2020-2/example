@@ -35,6 +35,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # ERB Linter tool.
+  gem 'erb_lint', '~> 0.0.35', require: false
   # Automatic Ruby code style checking tool. Aims to enforce
   # the community-driven Ruby Style Guide.
   gem 'rubocop', '~> 0.89.1', require: false
