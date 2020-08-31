@@ -34,6 +34,8 @@ group :development, :test do
 end
 
 group :test do
+  # Code coverage for Ruby 1.9+ with a powerful configuration library
+  gem 'simplecov', '~> 0.19.0', require: false
   # rspec-rails is a testing framework for Rails 3+.
   gem 'rspec-rails', '~> 4.0.1'
   # Making tests easy on the fingers and eyes
