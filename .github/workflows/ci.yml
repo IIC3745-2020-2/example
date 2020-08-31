@@ -65,27 +65,27 @@ jobs:
           bundle install --jobs 4 --retry 3
       - name: Yarn install
         run: yarn install
-      # - name: Setup Database
-      #   run: |
-      #     bundle exec rails db:create
-      #     bundle exec rails db:schema:load
-      # - name: Run rspec
-      #   run: bundle exec rspec
-      # - name: Run audit
-      #   run: bundle exec rake audit
-      # - name: Run brakeman
-      #   run: bundle exec rake brakeman
-      # - name: Run rubocop
-      #   run: bundle exec rake rubocop
-      # - name: Run erblint
-      #   run: bundle exec rake erblint
-      # - name: Run eslint
-      #   run: bundle exec rake eslint
-      # - name: Run scss_lint
-      #   run: bundle exec rake scss_lint
-      # - name: Upload coverage results
-      #   uses: actions/upload-artifact@v1
-      #   if: always()
-      #   with:
-      #     name: coverage-report
-      #     path: coverage
+      - name: Setup Database
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:schema:load
+      - name: Run rspec
+        run: bundle exec rspec
+      - name: Run audit
+        run: bundle exec rake audit
+      - name: Run brakeman
+        run: bundle exec rake brakeman
+      - name: Run rubocop
+        run: bundle exec rake rubocop
+      - name: Run erblint
+        run: bundle exec rake erblint
+      - name: Run eslint
+        run: bundle exec rake eslint
+      - name: Run scss_lint
+        run: bundle exec rake scss_lint
+      - name: Upload coverage results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage
