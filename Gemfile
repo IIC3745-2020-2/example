@@ -33,6 +33,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  # Brakeman detects security vulnerabilities in Ruby on Rails
+  # applications via static analysis.
+  gem 'brakeman', '~> 4.9.0', require: false
+  # bundler-audit provides patch-level verification for Bundled apps.
+  gem 'bundler-audit', '~> 0.7.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # ERB Linter tool.
