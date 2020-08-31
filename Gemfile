@@ -31,6 +31,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Automatic Ruby code style checking tool. Aims to enforce
+  # the community-driven Ruby Style Guide.
+  gem 'rubocop', '~> 0.89.1', require: false
+  gem 'rubocop-performance', '~> 1.7.1', require: false
+  gem 'rubocop-rails', '~> 2.7.1', require: false
+  gem 'rubocop-rspec', '~> 1.43.2', require: false
 end
 
 group :test do
