@@ -42,6 +42,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # ERB Linter tool.
   gem 'erb_lint', '~> 0.0.35', require: false
+  # factory_bot provides a framework and DSL for defining and using factories
+  gem 'factory_bot_rails', '~> 6.1.0'
   # Automatic Ruby code style checking tool. Aims to enforce
   # the community-driven Ruby Style Guide.
   gem 'rubocop', '~> 0.89.1', require: false
