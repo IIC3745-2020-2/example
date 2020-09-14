@@ -57,6 +57,8 @@ end
 group :test do
   # Code coverage for Ruby 1.9+ with a powerful configuration library
   gem 'simplecov', '~> 0.19.0', require: false
+  # Extracting `assigns` and `assert_template` from ActionDispatch.
+  gem 'rails-controller-testing', '~> 1.0.5'
   # rspec-rails is a testing framework for Rails 3+.
   gem 'rspec-rails', '~> 4.0.1'
   # Making tests easy on the fingers and eyes
