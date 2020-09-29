@@ -11,7 +11,8 @@ jobs:
   tests:
     name: Tests and linters
     timeout-minutes: 10
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+
     env:
       DATABASE_URL: postgresql://localhost/postgres
       POSTGRES_DB: postgres
