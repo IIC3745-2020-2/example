@@ -9,6 +9,12 @@ on:
       - development
       - master
 jobs:
+  always_jobs:
+    name: Always run jobs
+    runs-on: self-hosted
+    steps:
+      - name: Always run
+        run: echo "Testing jobs"
   tests:
     name: Tests and linters
     timeout-minutes: 10
