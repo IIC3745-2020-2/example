@@ -78,8 +78,8 @@ jobs:
           bundle exec rails db:schema:load
       - name: Run rspec
         run: bundle exec rspec
-      - name: Run audit
-        run: bundle exec rake audit
+      #- name: Run audit
+      #  run: bundle exec rake audit
       - name: Run brakeman
         run: bundle exec rake brakeman
       - name: Run rubocop
