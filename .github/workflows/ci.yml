@@ -82,14 +82,14 @@ jobs:
       #  run: bundle exec rake audit
       - name: Run brakeman
         run: bundle exec rake brakeman
-      - name: Run rubocop
-        run: bundle exec rake rubocop
-      - name: Run erblint
-        run: bundle exec rake erblint
-      - name: Run eslint
-        run: bundle exec rake eslint
-      - name: Run scss_lint
-        run: bundle exec rake scss_lint
+      #- name: Run rubocop
+      #  run: bundle exec rake rubocop
+      #- name: Run erblint
+      #  run: bundle exec rake erblint
+      #- name: Run eslint
+      #  run: bundle exec rake eslint
+      #- name: Run scss_lint
+      #  run: bundle exec rake scss_lint
       - name: Upload coverage results
         uses: actions/upload-artifact@v1
         if: always()
