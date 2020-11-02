@@ -61,6 +61,10 @@ group :development, :test do
 end
 
 group :test do
+  # Behaviour Driven Development with elegance and joy
+  gem 'cucumber-rails', '~> 2.2.0', require: false
+  # Strategies for cleaning databases. Can be used to ensure a clean slate for testing.
+  gem 'database_cleaner', '~> 1.8.5'
   # Code coverage for Ruby 1.9+ with a powerful configuration library
   gem 'simplecov', '~> 0.19.0', require: false
   # Extracting `assigns` and `assert_template` from ActionDispatch.
