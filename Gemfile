@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.7.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgresql as the database for Active Record
@@ -50,6 +52,10 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.7.1', require: false
   gem 'rubocop-rails', '~> 2.7.1', require: false
   gem 'rubocop-rspec', '~> 1.43.2', require: false
+  # rspec-rails is a testing framework for Rails 3+.
+  gem 'rspec-rails', '~> 4.0.1'
+  # Making tests easy on the fingers and eyes
+  gem 'shoulda-matchers', '~> 4.4.1'
   # Configurable tool for writing clean and consistent SCSS
   gem 'scss_lint', '~> 0.59.0', require: false
 end
@@ -59,13 +65,12 @@ group :test do
   gem 'simplecov', '~> 0.19.0', require: false
   # Extracting `assigns` and `assert_template` from ActionDispatch.
   gem 'rails-controller-testing', '~> 1.0.5'
-  # rspec-rails is a testing framework for Rails 3+.
-  gem 'rspec-rails', '~> 4.0.1'
-  # Making tests easy on the fingers and eyes
-  gem 'shoulda-matchers', '~> 4.4.1'
 end
 
 group :development do
+  # Annotates Rails/ActiveRecord Models, routes, fixtures,
+  # and others based on the database schema.
+  gem 'annotate', '~> 3.1.1'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'
