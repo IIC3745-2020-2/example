@@ -14,6 +14,7 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 
+require 'capybara/rspec'
 require 'simplecov'
 SimpleCov.start 'rails' do
   minimum_coverage 100

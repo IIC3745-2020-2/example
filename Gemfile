@@ -42,6 +42,8 @@ group :development, :test do
   gem 'bundler-audit', '~> 0.7.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Capybara is an integration testing tool for rack based web applications.
+  gem 'capybara', '~> 3.33.0'
   # ERB Linter tool.
   gem 'erb_lint', '~> 0.0.35', require: false
   # factory_bot provides a framework and DSL for defining and using factories
